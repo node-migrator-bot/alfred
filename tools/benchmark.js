@@ -13,7 +13,7 @@ process.on('uncaughtException', function(excp) {
 var path = require('path');
 
 var benchmark_path = path.join(__dirname, '..', 'benchmarks', process.argv[2] + '.js');
-if (!path.existsSync(benchmark_path)) throw "Could not find benchmark path " + benchmark_path;
+if (!fs.existsSync(benchmark_path)) throw "Could not find benchmark path " + benchmark_path;
 
 var benchmark_module = require(benchmark_path);
 

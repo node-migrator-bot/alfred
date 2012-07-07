@@ -3,7 +3,7 @@
 var path = require('path');
 
 var test_path = path.join(__dirname, '..', 'test', process.argv[2] + '.js');
-if (!path.existsSync(test_path)) throw "Could not find test path " + test_path;
+if (!fs.existsSync(test_path)) throw "Could not find test path " + test_path;
 
 var test_module = require(test_path);
 

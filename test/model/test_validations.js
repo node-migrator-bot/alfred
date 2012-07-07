@@ -54,7 +54,7 @@ var RIGHT_USER = {name: 'Pedro', age: 30, sex: 'm', address: 'Estrada 1', email:
 
 module.exports.setup = function(next) {
   (function removeFilesUnder(dir) {
-    if (path.existsSync(dir)) {
+    if (fs.existsSync(dir)) {
       fs.readdirSync(dir).forEach(function(path) {
         var path = dir + '/' + path;
         var stat = fs.statSync(path);

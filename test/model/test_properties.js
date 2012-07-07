@@ -10,7 +10,7 @@ var UNKNOWN_PROP_NAME = 'unknownProperty';
 
 module.exports.setup = function(next) {
   (function removeFilesUnder(dir) {
-    if (path.existsSync(dir)) {
+    if (fs.existsSync(dir)) {
       fs.readdirSync(dir).forEach(function(path) {
         var path = dir + '/' + path;
         var stat = fs.statSync(path);
